@@ -1,4 +1,4 @@
-import { Certificate, AlertTriangle, CheckCircle, Clock, Download, Eye, Trash2, Plus, Search, Filter } from 'lucide-react';
+import { Verified, AlertTriangle, CheckCircle, Clock, Download, Eye, Trash2, Plus, Search, Filter } from 'lucide-react';
 
 interface CertificateItem {
   id: string;
@@ -58,7 +58,7 @@ export default function CertificateManager() {
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
               <div className="p-2 bg-primary/20 rounded-lg">
-                <Certificate className="w-6 h-6 text-primary" />
+                <Verified className="w-6 h-6 text-primary" />
               </div>
               <h1 className="text-2xl font-bold tracking-tight">Certificate Manager Tool</h1>
             </div>
@@ -79,7 +79,7 @@ export default function CertificateManager() {
                 <p className="text-muted text-sm font-medium mb-1">Total Certificates</p>
                 <p className="text-3xl font-bold">4</p>
               </div>
-              <Certificate className="w-10 h-10 text-secondary/30" />
+              <Verified className="w-10 h-10 text-secondary/30" />
             </div>
           </div>
           <div className="card p-6">
