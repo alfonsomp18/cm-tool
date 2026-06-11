@@ -1,0 +1,66 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --font-sans: 'Geist', system-ui, sans-serif;
+  --font-mono: 'Geist Mono', monospace;
+  
+  /* Color tokens */
+  --color-background: #0f0f0f;
+  --color-foreground: #fafafa;
+  --color-card: #1a1a1a;
+  --color-card-foreground: #fafafa;
+  --color-primary: #10b981;
+  --color-primary-foreground: #0f0f0f;
+  --color-secondary: #6366f1;
+  --color-secondary-foreground: #fafafa;
+  --color-accent: #f59e0b;
+  --color-accent-foreground: #0f0f0f;
+  --color-muted: #666666;
+  --color-muted-foreground: #a3a3a3;
+  --color-border: #2a2a2a;
+  --color-input: #1a1a1a;
+  --color-ring: #10b981;
+  
+  /* Radius */
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium text-sm;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/90 transition-colors font-medium text-sm;
+  }
+  
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 text-foreground hover:bg-muted rounded-lg transition-colors font-medium text-sm;
+  }
+  
+  .card {
+    @apply bg-card text-card-foreground rounded-lg border border-border;
+  }
+  
+  .badge {
+    @apply inline-flex items-center gap-1 px-2 py-1 bg-secondary/20 text-secondary text-xs font-medium rounded-full;
+  }
+  
+  .badge-success {
+    @apply inline-flex items-center gap-1 px-2 py-1 bg-primary/20 text-primary text-xs font-medium rounded-full;
+  }
+  
+  .badge-warning {
+    @apply inline-flex items-center gap-1 px-2 py-1 bg-accent/20 text-accent text-xs font-medium rounded-full;
+  }
+}
